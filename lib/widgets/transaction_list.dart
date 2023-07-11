@@ -5,10 +5,11 @@ import '../models/transactions.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
+  final Function deleteTx ;
 
   const TransactionList({
     Key? key,
-    required this.transactions,
+    required this.transactions, required this.deleteTx,
   }) : super(key: key);
 
   @override
@@ -54,6 +55,11 @@ class TransactionList extends StatelessWidget {
                     subtitle: Text(
                       DateFormat.yMMMd().format(transactions[index].date),
                     ),
+                    trailing: IconButton(
+                      onPressed: () => deleteTx(transactions[index].id),
+                      icon: const Icon(Icons.delete_forever, color: Colors.red),
+                    ),
+
                   ),
                 );
               },
