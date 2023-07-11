@@ -38,9 +38,13 @@ dependencies:
   intl: ^0.17.0
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
-
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/handexpanses.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
